@@ -9,13 +9,16 @@ import com.bumptech.glide.Glide
 import com.example.alpha.R
 import com.example.alpha.databinding.MyViewGroupBinding
 import com.example.alpha.entity.SingleResultInterface
+import javax.inject.Inject
 
-class PhotosAdapter(private val values: List<SingleResultInterface?>) :
+class PhotosAdapter @Inject constructor(private val values: List<SingleResultInterface?>) :
     RecyclerView.Adapter<PhotosViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PhotosViewHolder {
         val binding = MyViewGroupBinding.inflate(LayoutInflater.from(parent.context))
         return PhotosViewHolder(binding)
     }
+
+
 
     override fun getItemCount(): Int = values.size
 

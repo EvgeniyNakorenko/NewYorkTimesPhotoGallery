@@ -30,6 +30,7 @@ class ContentRepository @Inject constructor() {
             "arts.json?api-key=RLAiANGjNJqIUe6wH7kHVukJY2S4joGz"
         )
         suspend fun getContent(): Response<ResultsDto>
+
     }
 
 }
